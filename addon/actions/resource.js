@@ -8,6 +8,7 @@ export default function(path, options = {}) {
     return Action.create({
       id: path,
       model: this,
+      integrated: true,
       options: deepMerge({}, options, actionOptions)
     }).callAction();
   };
